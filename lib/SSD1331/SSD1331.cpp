@@ -242,14 +242,14 @@ void lcdTestPattern(void)
   {
     for(w=0; w<96; w++)
     {
-      if(w>83){display.writePixel(WHITE);}
-      else if(w>71){display.writePixel(BLUE);}
-      else if(w>59){display.writePixel(GREEN);}
-      else if(w>47){display.writePixel(CYAN);}
-      else if(w>35){display.writePixel(RED);}
-      else if(w>23){display.writePixel(MAGENTA);}
-      else if(w>11){display.writePixel(YELLOW);}
-      else {display.writePixel(BLACK);}
+      if(w>83){display.SPI_WRITE16(WHITE);}
+      else if(w>71){display.SPI_WRITE16(BLUE);}
+      else if(w>59){display.SPI_WRITE16(GREEN);}
+      else if(w>47){display.SPI_WRITE16(CYAN);}
+      else if(w>35){display.SPI_WRITE16(RED);}
+      else if(w>23){display.SPI_WRITE16(MAGENTA);}
+      else if(w>11){display.SPI_WRITE16(YELLOW);}
+      else {display.SPI_WRITE16(BLACK);}
     }
   }
   display.endWrite();
